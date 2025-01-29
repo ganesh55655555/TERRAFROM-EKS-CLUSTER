@@ -1,0 +1,23 @@
+authentik:
+    secret_key: "XhsxXW6aYhMVXgNqjqa1Q2j5YJ7BvjoK7M2t91D9UL2snT51MA6cLPIghcpCO2BhM75hyKi9ArpvXIdX"
+    # This sends anonymous usage-data, stack traces on errors and
+    # performance data to sentry.io, and is fully opt-in
+    error_reporting:
+        enabled: true
+    postgresql:
+        password: "GvmTFR83cA0TByfRIXXPHz6Vxuk1SuC26MtUcws5Du117bvLbu"
+
+server:
+    ingress:
+        # Specify kubernetes ingress controller class name
+        ingressClassName: nginx
+        enabled: true
+        hosts:
+            - authentik.local
+
+postgresql:
+    enabled: true
+    auth:
+        password: "GvmTFR83cA0TByfRIXXPHz6Vxuk1SuC26MtUcws5Du117bvLbu"
+redis:
+    enabled: true
